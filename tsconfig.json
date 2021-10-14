@@ -2,14 +2,23 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "preserveConstEnums": true,
         "target": "esnext",
         "module": "commonjs",
-        "watch": true
+        "watch": true,
+        "baseUrl": ".",
+        "paths": {
+            "@root/*":["./*"],
+            "@core/*":["exnode-core/*"],
+            "*": ["*"]
+        },
+        "moduleResolution": "node",
+        "traceResolution": true,
     },
     "type": "module",
-    "ts-node": {},
     "lib": ["es6"],
     "module": "commonjs",
-    "exclude": ["exnode-core/*"]
+    
+   
    
 }

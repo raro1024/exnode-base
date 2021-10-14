@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/raro1024/exnode-base/issues"
   },
-  "homepage": "https://github.com/raro1024/exnode-base#readme"
+  "homepage": "https://github.com/raro1024/exnode-base#readme",
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@core": "exnode-core"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.9"
+  }
 }

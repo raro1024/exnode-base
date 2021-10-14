@@ -1,5 +1,6 @@
 // Start the Main Server
-import * as mainserver from "./exnode-core/index";
+require("module-alias/register");
+import * as mainserver from "@core/index";
 console.log("mainserver");
 
 mainserver.core.listen(8080, () => {
