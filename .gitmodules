@@ -1,0 +1,3 @@
+[submodule "exnode-core"]
+	path = exnode-core
+	url = https://github.com/raro1024/exnode-core
