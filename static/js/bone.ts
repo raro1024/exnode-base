@@ -1,6 +1,10 @@
 /**
  * This File handel the Bone Frontend work
  */
+ interface HTMLInputEvent extends Event {
+    target: HTMLInputElement & EventTarget;
+}
+import * as axios from "axios";
 document.addEventListener("DOMContentLoaded", () => init())
 
 function init() {
@@ -41,7 +45,7 @@ function init() {
     });
     document.querySelectorAll('input[type="file"]').forEach((element) => {
 
-        element.addEventListener("change", (e) => {
+        element.addEventListener("change", (e?:HTMLInputEvent) => {
             /*
             console.log(e.target.files[0]);
             var data = new FormData()
@@ -77,7 +81,7 @@ function upload(file,inputElement) {
 
     axios.put('/file/upload', data, config)
         .then(res=> {
-            document.getElementById(inputElement.id+"-filedata").value=JSON.stringify(res["data"]);
+            (document.getElementById(inputElement.id+"-filedata") as HTMLInputElement).value=JSON.stringify(res["data"]);
         })
         .catch(err => console.log(err))
 }

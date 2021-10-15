@@ -12,8 +12,8 @@
             "@core/*":["exnode-core/*"],
             "*": ["*"]
         },
-        "moduleResolution": "node",
         "traceResolution": true,
+        
     },
     "type": "module",
     "lib": ["es6"],
