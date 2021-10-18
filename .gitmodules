@@ -1,3 +1,6 @@
 [submodule "exnode-core"]
 	path = exnode-core
 	url = https://github.com/raro1024/exnode-core
+[submodule "exnode-admin"]
+	path = exnode-admin
+	url = https://github.com/raro1024/exnode-admin
