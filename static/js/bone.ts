@@ -4,7 +4,6 @@
  interface HTMLInputEvent extends Event {
     target: HTMLInputElement & EventTarget;
 }
-import * as axios from "axios";
 document.addEventListener("DOMContentLoaded", () => init())
 
 function init() {
@@ -81,7 +80,10 @@ function upload(file,inputElement) {
 
     axios.put('/file/upload', data, config)
         .then(res=> {
-            (document.getElementById(inputElement.id+"-filedata") as HTMLInputElement).value=JSON.stringify(res["data"]);
+            let input = document.getElementById(inputElement.id+"-filedata") as HTMLInputElement
+            console.log(input)
+            
+            input.value=JSON.stringify(res["data"]);
         })
         .catch(err => console.log(err))
 }
