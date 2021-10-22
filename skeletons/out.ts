@@ -1,15 +1,14 @@
-import { Skeleton } from '../exnode-core/skeleton';
-import { stringBone } from '../exnode-core/bones/stringbone';
-import { fileBone } from '../exnode-core/bones/fileBone';
+import { Skeleton } from '@core/skeleton';
+import { stringBone } from '@core/bones/stringbone';
+import { fileBone } from '@core/bones/fileBone';
+import { numericBone } from '@core/bones/numericBone';
 export class  OutSkel extends Skeleton
 {
     kindname="out";
-    testString: stringBone;
-    testfileout: fileBone;
+    testNumBone: numericBone;
     constructor()
     {
         super();
-        this.testString=new stringBone();
-        this.testfileout=new fileBone();
+        this.testNumBone=new numericBone({descr:"das ist ein Bone descr"});
     }
 }

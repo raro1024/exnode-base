@@ -8,7 +8,6 @@
         "watch": true,
         "baseUrl": ".",
         "paths": {
-            "@root/*":["./*"],
             "@core/*":["exnode-core/*"],
             "*": ["*"]
         },
@@ -18,6 +17,7 @@
     "type": "module",
     "lib": ["es6"],
     "module": "commonjs",
+   // "exclude": ["exnode-admin/static/*"]
     
    
    
